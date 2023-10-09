@@ -35,7 +35,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - Write a README with the description of your project
 - You should have an ***AUTHORS*** file at the root of your repository, listing all individuals having contributed content to the repository. Format, see Docker
 
-### List of allowed functions and system calls
+## List of allowed functions and system calls
 
 - access (man 2 access)
 - chdir (man 2 chdir)
@@ -69,7 +69,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - wait4 (man 2 wait4)
 - write (man 2 write)
 
-### Compilation
+## Compilation
 Your shell will be compiled this way:
 
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
