@@ -2,10 +2,10 @@
 
 /**
  * _atoi - a function that converts a string to an integer
- * @s: string to be converted
+ * @str: string to be converted
  *Return: n (success) 0 (otherwise)
  */
-int _atoi(char *s)
+int _atoi(char *str)
 {
 	int flag, i, n, d, len, digit;
 

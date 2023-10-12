@@ -28,7 +28,7 @@ int _check(char *str, char c);
 char *_strtok(char *str, char *delim);
 char *_strtok2(char *str, char *delim);
 int _strncmp(const char *s1, const char *s2, size_t n);
-
+int _atoi(char *str);
 
 /* MEMORY HANDLING */
 char *_memcpy(char *dest, char *src, unsigned int n);
