@@ -7,7 +7,7 @@
  * @overwrite: if 0 skip, otherwise (overwrite the variable if it already exists)
  * Return: 0 (success) -1 (otherwise).
  */
-int _setenv(const char *name, const char *value, int overwrite)
+int _setenv(char *name, char *value, int overwrite)
 {
 	extern char **environ;
 	size_t name_len;
@@ -48,7 +48,7 @@ int _setenv(const char *name, const char *value, int overwrite)
 	for (i = 0; environ[i] != NULL; i++)
 		nenv_vars++;
 
-	new_env = _realloc(environ, (nenv_vars + 2) * sizeof(char *));
+	new_env = _realloc(environ, nenv_vars * sizeof(char *), (nenv_vars + 2) * sizeof(char *));
 	if (new_env == NULL)
 	{
 		free(new_env_var);
