@@ -38,13 +38,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void *_realloc_(char *str, char *ptr, unsigned int old_size, unsigned int new_size);
 
 /* SETENV */
-int _issetenv(const char *command);
-int tokenize(const char *command, char *tokens[], int max_tokens);
-int _setenv(const char *name, const char *value, int overwrite);
+int _issetenv(char *command);
+int tokenize(char *command, char *tokens[], int max_tokens);
+int _setenv(char *name, char *value, int overwrite);
+
+/* UNSETENV */
+int _unsetenv(char *name);
 
 /*ARGS*/
-void _noargv(char *argv[], char *envp[]);
-void _yesargv(char *argv[], char *envp[]);
+void _noargv(char *argv[], char *_env[]);
+void _readargv(char *argv[], char *_env[]);
 
 
 /* errors 
