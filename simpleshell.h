@@ -12,6 +12,7 @@
 #include <sys/wait.h>
 
 #define SIZE 1024
+#define BUFSIZE 2048
 
 /* PRINT CHARACTER OR STRING TO STDOUT */
 int _putchar(char c);
@@ -27,7 +28,7 @@ char *str_concat(char *str1, char *str2);
 int _check(char *str, char c);
 char *_strtok(char *str, char *delim);
 char *_strtok2(char *str, char *delim);
-int _strncmp(const char *s1, const char *s2, size_t n);
+int _strncmp(char *s1, char *s2, size_t n);
 int _atoi(char *str);
 
 /* MEMORY HANDLING */
@@ -45,10 +46,11 @@ int _setenv(char *name, char *value, int overwrite);
 /* UNSETENV */
 int _unsetenv(char *name);
 
-/*ARGS*/
-void _noargv(char *argv[], char *_env[]);
+/*ARGS FUNCTIONS*/
 void _readargv(char *argv[], char *_env[]);
-
+void _read(char *argv[], char *_env[]);
+int cui(char **input, int loop, char *iu, char **arg, char ***env_copy, int *j, char *result);
+void shfunc(char *line, int loop, char *argv[], char ***env_copy, int *j, char *result)
 
 /* errors 
  * 
