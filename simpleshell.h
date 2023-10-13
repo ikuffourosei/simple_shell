@@ -12,7 +12,6 @@
 #include <sys/wait.h>
 
 #define SIZE 1024
-#define BUFSIZE 2048
 
 /* PRINT CHARACTER OR STRING TO STDOUT */
 int _putchar(char c);
@@ -50,7 +49,19 @@ int _unsetenv(char *name);
 void _readargv(char *argv[], char *_env[]);
 void _read(char *argv[], char *_env[]);
 int cui(char **input, int loop, char *iu, char **arg, char ***env_copy, int *j, char *result);
-void shfunc(char *line, int loop, char *argv[], char ***env_copy, int *j, char *result)
+void shfunc(char *line, int loop, char *argv[], char ***env_copy, int *j, char *result);
+
+/* BUFFER */
+#define BUFSIZE 2048
+void buf_clean(char *c);
+void buf_fil(char *c, char *a);
+
+/* WORKING DIRECTORY */
+void old_dir(char *buffer, char **myenv);
+void _dir(char *buffer, char **myenv);
+
+
+
 
 /* errors 
  * 
