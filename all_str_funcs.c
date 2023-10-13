@@ -138,8 +138,6 @@ char *_strtok2(char *str, char *delim)
         return (NULL);
 }
 
-#include "simpleshell.h"
-
 /**
  * _strncmp - Compare two strings up to n number of characters.
  * @s1: first string parameter.
