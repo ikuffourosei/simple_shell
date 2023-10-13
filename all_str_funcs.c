@@ -138,6 +138,7 @@ char *_strtok2(char *str, char *delim)
         return (NULL);
 }
 
+/* STRING COMPARE */
 /**
  * _strncmp - Compare two strings up to n number of characters.
  * @s1: first string parameter.
