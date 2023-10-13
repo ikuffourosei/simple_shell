@@ -12,7 +12,7 @@ void old_dir(char *buffer, char **myenv)
 	char *user_pwd;
 	char str[] = "OLDPWD=";
 	
-	user_pwd = _strconcat(str, buffer);
+	user_pwd = str_concat(str, buffer);
 	i = 0;
 	n = 0;
 	j = 0;
@@ -64,7 +64,7 @@ void _dir(char *buffer, char **myenv)
 	char *user_pwd;
 	char str[] = "PWD=";
 	
-	user_pwd = _strconcat(str, buffer);
+	user_pwd = str_concat(str, buffer);
 	i = 0;
 	n = 0;
 	j = 0;
