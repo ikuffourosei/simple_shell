@@ -65,6 +65,19 @@ char **checkbin(char **buffer, char **env_copy);
 char *verify_path(char *path, char *pwd);
 char *get_path(char **env_copy);
 
+/* HANDLE COMMENTS AND SEMICOLON */
+char *_comments(char *line);
+int semicolon(char *line, int loop, char **argv);
+
+/* SHELL BUILTIN COMMANDS CHECKS */
+int _isenv(char **input, char **env_copy);
+int _iscd(char **input, int loop, char *arg[], char **env_copy);
+int _isexit(char **input, int loop, char *line, char **arg, char **env_copy, char *result);
+int _ishelp(char **input, int loop, char *arg[], char **env_copy);
+
+/* SHELL BUILTIN FUNCTIONS */
+char **create_env(char *en_v[]);
+void _env(char **myenv);
 
 /* errors 
  * 
