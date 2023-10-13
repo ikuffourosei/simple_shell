@@ -60,7 +60,10 @@ void buf_fil(char *c, char *a);
 void old_dir(char *buffer, char **myenv);
 void _dir(char *buffer, char **myenv);
 
-
+/* PATH */
+char **checkbin(char **buffer, char **env_copy);
+char *verify_path(char *path, char *pwd);
+char *get_path(char **env_copy);
 
 
 /* errors 
