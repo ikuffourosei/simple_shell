@@ -8,8 +8,8 @@ void _errorexit(char **input)
 {
         int a = 2;
 
-        printerror(input[0]);
-        printerror(": Illegal number: ");
+	printerror(input[0]);
+	printerror(": Illegal number: ");
         printerror(input[1]);
         puterror('\n');
         currentstatus(&a);
@@ -29,9 +29,8 @@ void _errorhelp(char **input)
         printerror("'. Try 'help help' or 'man -k '");
         printerror(input[1]);
         printerror("' or info '");
-        printerror(input[1]);
-	puterror(''');
-        puterror('\n');
+	printerror(input[1]);
+	puterror('\n');
         currentstatus(&a);
 }
 
@@ -58,7 +57,7 @@ void _errornotfound(char **input)
 {
 	int a = 2;
 
-	printerror(inputerror[0]);
+	printerror(input[0]);
 	printerror(": not found");
 	puterror('\n');
 	currentstatus(&a);
