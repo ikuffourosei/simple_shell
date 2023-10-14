@@ -17,6 +17,9 @@
 int _putchar(char c);
 int _print(char *str);
 
+/* PRINT NUMBER */
+void print_n(int number);
+
 /* PRINT ERROR */
 int printerror(char *str);
 int puterror(char c);
@@ -92,15 +95,14 @@ char  *_getline(int *loop, char **envcopy, int e);
 char  *_getlineav(int *loop, char **envcopy, int e, char **arg);
 
 
-/* errors 
- * 
-void _printerr(char **p, int loop, int sig, char *v[]);
-void _builtinerr(char **p);
-void _builtinerr2(char **p);
-void _errorcd(char **p);
-void _errorexit(char **p);
-void _errorhelp(char **p);
-void _errorgarbage(char **p);
-void print_n(int number); */
+/* ERROR MESSAGES */  
+void _errorcd(char **input);
+void _errorexit(char **input);
+void _errorhelp(char **input);
+void _errornotfound(char **input);
+//void _printerr(char **p, int loop, int sig, char *v[]);
+//void _builtinerr(char **p);
+//void _builtinerr2(char **p);
+
 
 #endif
