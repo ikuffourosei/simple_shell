@@ -7,7 +7,7 @@ void out2(char **m, int e, char *line);
 void out3(char **m, int e);
 
 /**
- * _getline - function to read what the user writes
+ * _getline - function that reads user input interactively
  * @loop: loop count
  * @e: length of envcopy
  * @envcopy: copy of environment variables
@@ -58,7 +58,8 @@ char  *_getline(int *loop, char **envcopy, int e)
 	return (line);
 }
 /**
- * _getlineav - function to read what the user writes
+ * _getlineav - function used for reading input from a file
+ * specified as an argument when launching the shell
  * @loop: loop count
  * @e: length of envcopy
  * @envcopy: copy of environmental
