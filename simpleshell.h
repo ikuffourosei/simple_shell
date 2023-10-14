@@ -101,9 +101,10 @@ void _errorexit(char **input);
 void _errorhelp(char **input);
 void _errornotfound(char **input);
 void _put_err(char **input, int loop, int signal, char *arg[]);
-//void _printerr(char **p, int loop, int sig, char *v[]);
 void _builtinerr(char **input);
 void _builtinerr2(char **input);
 
+/* SIGNAL */
+void _signal(int sig);
 
 #endif
