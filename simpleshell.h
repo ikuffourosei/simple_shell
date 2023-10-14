@@ -76,9 +76,14 @@ int _isexit(char **input, int loop, char *line, char **arg, char **env_copy, cha
 int _ishelp(char **input, int loop, char *arg[], char **env_copy);
 
 /* SHELL BUILTIN FUNCTIONS */
+char *_gethome(char **envcopy);
 char **create_env(char *en_v[]);
 void _env(char **myenv);
+void foork(char **arg, char *input, int ptc, int loop, char **v, int e, char **envcopy, char *result);
 
+/* GETLINE */
+char  *_getline(int *loop, char **envcopy, int e);
+char  *_getlineav(int *loop, char **envcopy, int e, char **arg);
 /* errors 
  * 
 void _printerr(char **p, int loop, int sig, char *v[]);
