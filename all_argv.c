@@ -2,7 +2,7 @@
 
 /**
  * _readargv - reading and executing commands from the user,
- * while allowing multiple commands separated by semicolons 
+ * while allowing multiple commands separated by semicolons
  * @argv: arguments vector
  * @_env: environment variables
  */
@@ -14,7 +14,7 @@ void _readargv(char *argv[], char *_env[])
 
 	ptr1 = NULL;
 	line = NULL;
-	parse = NULL ;
+	parse = NULL;
 	env_copy = NULL;
 	loop = 0;
 	j = 0;
@@ -48,7 +48,7 @@ void _readargv(char *argv[], char *_env[])
 }
 
 /**
- * _read - function for shell execution 
+ * _read - function for shell execution
  * without command-line arguments.
  * @argv: arguments vector
  * @_env: environment variables
@@ -58,17 +58,17 @@ void _read(char *argv[], char *_env[])
 	char *ptr, *line, *parse, **env_copy;
 	int i, j, sc, *loop_track;
 	static int loop;
-	
+
 	ptr1 = NULL;
 	line = NULL;
-	parse = NULL ;
+	parse = NULL;
 	env_copy = NULL;
 	loop = 0;
 	j = 0;
 	loop_track = &loop;
 
 	while (1)
-        {
+	{
 		if (loop == 0)
 		{
 			env_copy = create_env(_env);
