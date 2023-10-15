@@ -1,0 +1,63 @@
+.TH man 1 "18 October 2023" "1.0" "simple_shell manual page"
+
+.SH NAME
+.B simple_shell
+- Simple shell - a UNIX-like command line interpreter.
+
+.SH SYNOPSIS
+ hsh [options] [file]
+
+.SH DESCRIPTION
+The **simple_shell** is a basic command-line interface implemented in C that provides a simplified interaction with the operating system.
+It allows you to run various system commands, manage files, and perform other common shell operations.
+
+.B Overview
+
+The simple shell is a basic UNIX-like terminal created with C programming language. Just like every other UNIX terminal, the simple shell accepts input from the commandline. It execute the command read from the STDIN or file or it display errors if any was encountered.
+
+.SH Return Value
+
+An execution returns 0 on success or any other value if otherwise.
+
+.SH BUILT -IN FUNCTIONS
+Each built -in command is executed within the shell.
+
+cd [directory] or cd [/path/to/directory], --changes the working directory.
+
+pwd, --prints the working directory.
+
+help [pattern] --Display help about a built -in command.
+
+exit [status] --Terminate shell with double C^D or EOF.
+
+.SH
+
+.SH OPTIONS
+.B simple_shell
+To every command, there are various options within. An option can be set by using the '-' symbol followed by the option. see example below.
+
+.SH EXAMPLE
+
+[command] [options]
+$ rm -rf,  --forcefuly removes a directory whether empty or not.  
+
+.SH USAGE
+To run the simple_shell, simply execute it from your command line:
+
+$ ./hsh
+
+.SH EXIT
+To exit the simple_shell, simple double press Ctrl + D.
+
+$ ^D 
+or
+$ exit [status]
+
+.SH SEE ALSO
+close (2), execve (2), exit (3), fork (2), free (3), getcwd (3), getline (3), malloc (3), open (2), read (2), signal (2), strtok (3), wait (2), waitpid (2), write (2).
+
+.SH BUGS
+None Yet.
+
+.SH AUTHOR
+Emmanuel Osei Kuffour, Francis Kojo Amekeh.
