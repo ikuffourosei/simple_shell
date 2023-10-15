@@ -32,6 +32,7 @@ char *_strtok(char *str, char *delim);
 char *_strtok2(char *str, char *delim);
 int _strncmp(char *s1, char *s2, size_t n);
 int _atoi(char *str);
+char **parsing(char *line);
 
 /* MEMORY HANDLING */
 char *_memcpy(char *dest, char *src, unsigned int n);
