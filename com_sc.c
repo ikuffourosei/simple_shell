@@ -39,7 +39,7 @@ char *_comments(char *line)
  * @line: input accepted from user
  * @loop: loop
  * @argv: pointer to a pointer to a character string
- * Return: 
+ * Return:
  * - 0 if there are no syntax errors(no semicolons or valid semicolon usage)
  * - 1 if it detects a syntax error
  */
