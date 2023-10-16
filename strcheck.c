@@ -6,20 +6,20 @@
  * @c: character being checked
  * Return: 1 (success) 0 (otherwise)
  */
-int _check(char *str, char c)
+int void _check(char *str, char c)
 {
-        int count = 0;
+	int count = 0;
 
-        while (str[count] != '\0')
-        {
-                if (str[count] == c)
-                {
-                        break;
-                }
-                count++;
-        }
-        if (str[count] == c)
-                return (1);
-        else
-                return (0);
+	while (str[count] != '\0')
+	{
+		if (str[count] == c)
+		{
+			break;
+		}
+		count++;
+	}
+	if (str[count] == c)
+		return (1);
+	else
+		return (0);
 }
