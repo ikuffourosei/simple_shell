@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * buf_clean - function that cleans the buffer
+ * buf_clean - A function that cleans the buffer
  * @c: buffer pointer
  * Return: 0 if exist cd in args[0]
  * -1 if otherwise
