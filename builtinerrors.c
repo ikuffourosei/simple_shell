@@ -11,7 +11,7 @@ void _builtinerr(char **input)
 {
 	int i, j, n, count;
 	char str1[5] = "exit", str2[2] = "cd", str3[5] = "help";
-	
+
 	i = 0;
 	j = 0;
 	n = 0;
@@ -55,7 +55,7 @@ void _builtinerr2(char **input)
 {
 	int i, j, count;
 	char str1[7] = "setenv", str2[9] = "unsetenv";
-	
+
 	i = 0;
 	j = 0;
 	count = 0;
