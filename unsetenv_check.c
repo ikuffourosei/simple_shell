@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _isunsetenv - Check if a command line input is "unsetenv" and call _unsetenv
+ * _isunsetenv - check if a command line input is "unsetenv" and call _unsetenv
  * @command: The input to be checked
  * @env_copy: Copy of the environmental variables
  * @j: Number of elements in env_copy
