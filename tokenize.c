@@ -7,12 +7,14 @@
  * @max_tokens: max number of tokens
  * Return: token_counts (int value)
  */
-int tokenize(const char *command, char *tokens[], int max_tokens)
+int tokenize(char *command, char *tokens[], int max_tokens)
 {
 	char *token;
 	char *delim[] = " ,()";
 	int token_count = 0;
-	
+
+	if (command == NULL)
+		return (0);
 	token = _strtok(command, delim);
 	while (token != NULL)
 	{

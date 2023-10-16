@@ -20,7 +20,7 @@ int _unsetenv(char *name)
 	{
 		env_var = environ[i];
 		name_len = strlength(name);
-		if (strncmp(env_var, name, name_len) == 0 && env_var[name_len] == '=')
+		if (_strncmp(env_var, name, name_len) == 0 && env_var[name_len] == '=')
 		{
 			for (j = i; environ[j] != NULL; j++)
 			{

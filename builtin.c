@@ -9,17 +9,14 @@
  */
 void _cd(char **input, int loop, char *arg[], char **myenv)
 {
-	char aux[BUFSIZE] = {0};
-	int res, i;
+	char aux[BUFSIZE] = {0}, *home = _gethome(myenv);
+	int res = 0, i = 0;
+	static int w  = 1;
 	static char buf[BUFSIZE];
-	static int w = 1;
-	char *home;
-
-	res = 0;
-	i = 0;
+	
 	currentstatus(&i);
 	if (w == 1)
-	{ home = _gethome(myenv);
+	{
 		if (!home)
 			getcwd(home, BUFSIZE);
 		old_dir(getcwd(buf, BUFSIZE), myenv);
@@ -67,12 +64,8 @@ void _cd(char **input, int loop, char *arg[], char **myenv)
  */
 void _type(char **input, int loop, char *line, int i, char **arg, char **envcopy, int e, char *result)
 {
-	long int res;
-	unsigned int x, flag;
-
-	res = 0;
-	x = 0;
-	flag = 0;
+	long int res = 0;
+	unsigned int x = 0, flag = 0;
 
 	if (input[1] == NULL || (input[1][0] == '0' && input[1][1] == '\0'))
 	{

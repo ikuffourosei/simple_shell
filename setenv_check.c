@@ -5,7 +5,7 @@
  * @command: input to be checked
  * Return: setenv value or -1 if failed
  */
-int _issetenv(const char *command)
+int _issetenv(char *command)
 {
 	char *tokens[4];
 	int num_tokens;
@@ -14,7 +14,7 @@ int _issetenv(const char *command)
 	{
 		num_tokens = tokenize(command, tokens, 4);
 
-        if (num_tokens == 4)
+        if (num_tokens >= 3)
 	{
 		return (_setenv(tokens[1], tokens[2], atoi(tokens[3])));
 	}
