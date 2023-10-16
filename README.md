@@ -82,7 +82,7 @@ Your shell will be compiled this way:
 - memcpy.c
 - printnum.c
 - realloc_1.c
-- shell.c
+- simpleshell.c
 - tokenize.c
 - all_argv.c
 - buffer.c

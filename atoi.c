@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _atoi - a function that converts a string to an integer
+ * _atoi - A function that converts a string to an integer
  * @str: string to be converted
  *Return: n (success) 0 (otherwise)
  */
