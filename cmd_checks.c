@@ -8,7 +8,7 @@
  * input array is the word "env"
  * @input: input array from user
  * @env_copy: copy of environmental variables
- * Return: 
+ * Return:
  * - 0 (success)
  * - -1 (otherwise)
  */
@@ -49,7 +49,7 @@ int _isenv(char **input, char **env_copy)
  * @loop: loop count
  * @arg: arguments
  * @env_copy: copy of environment variables
- * Return: 
+ * Return:
  * - 0 (success)
  * - -1 (otherwise)
  */
@@ -90,7 +90,7 @@ int _iscd(char **input, int loop, char *arg[], char **env_copy)
 /**
  * _isexit - function that check whether
  * the first word in the input array is the word "exit"
- * @input: array of input from user 
+ * @input: array of input from user
  * @loop: loop counter
  * @line: input user (pointer)
  * @arg: arguments in input
@@ -98,7 +98,7 @@ int _iscd(char **input, int loop, char *arg[], char **env_copy)
  * @result: complete input
  * Return: 0 (success) -1 (otherwise)
  */
-int _isexit(char **input, int loop, char *line, char **arg, char **env_copy, char *result)
+int _isexit(char **input, int loop, char *line, char **env_copy, char *result)
 {
 	int count, i, n, y;
 	char str[] = "exit";
@@ -146,13 +146,14 @@ int _isexit(char **input, int loop, char *line, char **arg, char **env_copy, cha
  * @loop: loop counter
  * @arg: arguments in input
  * @env_copy: copy of environmental variables
- * 
+ *
  * Return: 0 (success) -1 (otherwise)
  */
 int _ishelp(char **input, int loop, char *arg[], char **env_copy)
 {
 	int i, count;
 	char str[] = "help";
+
 	i = 0;
 	count = 0;
 
