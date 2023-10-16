@@ -29,7 +29,7 @@ void _put_err(char **input, int loop, int signal, char *arg[])
 		puterror(' ');
 		print_n(loop);
 		puterror(':');
-                puterror(' ');
+		puterror(' ');
 	}
 	if (pr == 2)
 		_builtinerr(input);
