@@ -108,4 +108,10 @@ void _builtinerr2(char **input);
 /* SIGNAL */
 void _signal(int sig);
 
+/* HELP FILES */
+ssize_t read_helphelp(char **envcopy);
+ssize_t read_cdhelp(char **envcopy);
+ssize_t read_exithelp(char **envcopy);
+ssize_t read_help(char **envcopy);
+
 #endif
