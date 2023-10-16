@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * tokenize - function that splits a command line into individual tokens
+ * tokenize - Function that splits a command line into individual tokens
  * @command: command paramter
  * @tokens: tokens paramter
  * @max_tokens: max number of tokens
