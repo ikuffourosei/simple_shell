@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _calloc - allocates memory for an array
+ * _calloc - function to allocates memory for an array
  * @nmemb: number of elements in array
  * @size: size of each array element bytes
  * Return: NULL or pointer to memory allocation

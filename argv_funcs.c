@@ -2,7 +2,6 @@
 
 /**
  *cui - Check User Input and determine which command
- is being invoked
  *@input: array of input tokens
  *@loop: loop counter
  *@iu: input user
@@ -13,7 +12,8 @@
  * Return: -1 if the input is neither env nor cd
  *or 0 if the input is a recognized command
  */
-int cui(char **input, int loop, char *iu, char **arg, char ***env_copy, int *j, char *result)
+int cui(char **input, int loop, char *iu, char **arg, char ***env_copy,\
+		int *j, char *result)
 {
 	int help = 0, cd = 0, ex = 0, env = 0, unset = 0, set = 0;
 
@@ -39,16 +39,16 @@ int cui(char **input, int loop, char *iu, char **arg, char ***env_copy, int *j, 
 }
 
 /**
- * shfunc- this function is the core of the shell and 
- * responsible for executing commands 
- *@line: input command of user 
+ * shfunc- this function is the core of the shell and
+ * responsible for executing commands
+ *@line: input command of user
  *@loop: loop count
  *@argv: argumnets vector
  *@env_copy: copy of environment variables
  *@j: number of elements in env_copy
  *@result: complete input
  */
-void shfunc(char *line, int loop, char *argv[], char ***env_copy, int *j, char *result)
+void shfunc(char *line, int loop, char *argv[], char ***env_copy, char *result)
 {
 	char **arg = NULL;
 	int ind, res;
