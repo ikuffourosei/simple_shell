@@ -4,10 +4,10 @@
  * _unsetenv - a function that delete a variable from the environment
  * @name: variable to be deleted
  * Return: 0 (success) -1 (otherwise)
- */ 
+ */
 int _unsetenv(char *name)
 {
-	extern char **environ;
+	char **environ;
 	char *env_var;
 	size_t name_len;
 	int i, j;
@@ -26,10 +26,8 @@ int _unsetenv(char *name)
 			{
 				environ[j] = environ[j + 1];
 			}
-		        return (0);
+			return (0);
 		}
 	}
-
-	// If variable not found
 	return (-1);
 }
