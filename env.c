@@ -76,8 +76,8 @@ char **create_env(char *en_v[])
 }
 
 /**
- * _env -  function that print the environment variables to the stdout 
- * Description: It iterates through the myenv array, 
+ * _env -  function that print the environment variables to the stdout
+ * Description: It iterates through the myenv array,
  * which is expected to be an array of strings representing
  * environment variables and prints each variable.
  * @myenv: copy of environmental
