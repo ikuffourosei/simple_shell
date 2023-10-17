@@ -6,12 +6,12 @@
  * the OLDPWD variable
  * @myenv: copy of environmental variable
  */
-void old_dir(char *buffer, char **myenv)
+ void old_dir(char *buffer, char **myenv)
 {
-	int env_len, buff_len, i, j, n, count; 
+	int env_len, buff_len, i, j, n, count;
 	char *user_pwd;
 	char str[] = "OLDPWD=";
-	
+
 	user_pwd = str_concat(str, buffer);
 	i = 0;
 	n = 0;
@@ -63,7 +63,7 @@ void _dir(char *buffer, char **myenv)
 	int env_len, buff_len, i, j, n, count;
 	char *user_pwd;
 	char str[] = "PWD=";
-	
+
 	user_pwd = str_concat(str, buffer);
 	i = 0;
 	n = 0;
@@ -89,7 +89,7 @@ void _dir(char *buffer, char **myenv)
 	{
 		buff_len = strlength(user_pwd);
 		env_len = strlength(myenv[i]);
-		
+
 		if (buff_len < env_len)
 		{
 			for (n = 0; user_pwd[n] != '\0'; n++)
