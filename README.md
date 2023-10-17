@@ -112,4 +112,4 @@ Your shell will be compiled this way:
 - puterror.c
 - setenv_check.c
 - strcheck.c
-
+- all_help.c
