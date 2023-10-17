@@ -88,7 +88,7 @@ void _read(char *argv[], char *_env[])
 				ptr[i] = '\n';
 				ptr[i + 1] = '\0';
 				shfunc(ptr, loop, argv, &env_copy, &j, line);
-				p = _strtok2(NULL, ";\n");
+				parse = _strtok2(NULL, ";\n");
 			}
 		}
 		free(line);

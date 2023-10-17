@@ -7,7 +7,6 @@
  */ 
 int _unsetenv(char **env, int *env_count, char *var_name)
 {
-	char **environ;
 	char *env_var;
 	size_t var_name_len;
 	int i, j, flag = 0;
@@ -16,13 +15,13 @@ int _unsetenv(char **env, int *env_count, char *var_name)
 	{
 		return (-1);
 	}
-	for (i = 0; i < env_count; i++)
+	for (i = 0; i < *env_count; i++)
 	{
 		env_var = env[i];
 		var_name_len = strlength(var_name);
 		if (_strncmp(env_var, var_name, var_name_len) == 0 && env_var[var_name_len] == '=')
 		{
-			for (j = i; j < env_count - 1; j++)
+			for (j = i; j < *env_count - 1; j++)
 			{
 				env[j] = env[j + 1];
 			}

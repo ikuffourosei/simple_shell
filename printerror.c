@@ -12,7 +12,7 @@ int printerror(char *str)
 	while (str[count] != '\0')
 	{
 		puterror(str[count]);
-		count++
+		count++;
 	}
 	return (count);
 }

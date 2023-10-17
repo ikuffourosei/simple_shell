@@ -6,7 +6,7 @@
  * @c: character being checked
  * Return: 1 (success) 0 (otherwise)
  */
-int void _check(char *str, char c)
+int _check(char *str, char c)
 {
 	int count = 0;
 

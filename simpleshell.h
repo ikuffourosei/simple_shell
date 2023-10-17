@@ -47,8 +47,8 @@ int tokenize(char *command, char *tokens[], int max_tokens);
 int _setenv(char *name, char *value, int overwrite);
 
 /* UNSETENV */
-int _unsetenv(char *name);
-int _isunsetenv(char *command, char **env_copy, int *j, char **arg);
+int _unsetenv(char **env, int *env_count, char *var_name);
+int _isunsetenv(char *command, char **env_copy, int *env_count, char **arg);
 
 /*ARGS FUNCTIONS*/
 void _readargv(char *argv[], char *_env[]);
