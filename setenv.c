@@ -20,7 +20,7 @@ int _setenv(char *name, char *value, int overwrite)
 		return (-1);
 
 	name_len = strlength(name);
-	
+
 	for (i = 0; environ != NULL && environ[i] != NULL; i++)
 	{
 		if (_strncmp(environ[i], name, name_len) == 0 && environ[i][name_len] == '=')
