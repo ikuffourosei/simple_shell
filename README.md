@@ -113,3 +113,4 @@ Your shell will be compiled this way:
 - setenv_check.c
 - strcheck.c
 - all_help.c
+- AUTHORS
