@@ -6,13 +6,13 @@
  */
 void _errorexit(char **input)
 {
-        int a = 2;
+	int a = 2;
 
 	printerror(input[0]);
 	printerror(": Illegal number: ");
-        printerror(input[1]);
-        puterror('\n');
-        currentstatus(&a);
+	printerror(input[1]);
+	puterror('\n');
+	currentstatus(&a);
 }
 
 /**
@@ -21,17 +21,17 @@ void _errorexit(char **input)
  */
 void _errorhelp(char **input)
 {
-        int a = 2;
+	int a = 2;
 
-        printerror(input[0]);
-        printerror(": no help topics match '");
-        printerror(input[1]);
-        printerror("'. Try 'help help' or 'man -k '");
-        printerror(input[1]);
-        printerror("' or info '");
+	printerror(input[0]);
+	printerror(": no help topics match '");
+	printerror(input[1]);
+	printerror("'. Try 'help help' or 'man -k '");
+	printerror(input[1]);
+	printerror("' or info '");
 	printerror(input[1]);
 	puterror('\n');
-        currentstatus(&a);
+	currentstatus(&a);
 }
 
 /**
@@ -53,7 +53,7 @@ void _errorcd(char **input)
  * _errorgarbage - function that writes the missing error
  * @inputerror: input accepted from user
  */
-void _errornotfound(char **input)
+int void _errornotfound(char **input)
 {
 	int a = 2;
 
