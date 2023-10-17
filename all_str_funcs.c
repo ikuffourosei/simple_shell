@@ -9,13 +9,13 @@
  */
 int strlength(char *str)
 {
-        int length = 0;
+	int length = 0;
 
-        while (str[length] != '\0')
-        {
-                length++;
-        }
-        return (length);
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+	return (length);
 }
 
 /*STRING CONCAT*/
@@ -56,7 +56,7 @@ char *str_concat(char *str1, char *str2)
 	{
 		ptr[k] = str1[k];
 		k++;
-	}	
+	}
 	for (k = i; k < i + j; k++, l++)
 	{
 		ptr[k] = str2[l];
@@ -65,7 +65,7 @@ char *str_concat(char *str1, char *str2)
 	return (ptr);
 }
 
-/* STRING TOKENIZATION*/ 
+/* STRING TOKENIZATION*/
 
 /**
  * _strtok - function that behaves exactky as the stdlib function strtok
@@ -77,16 +77,18 @@ char *str_concat(char *str1, char *str2)
 char *_strtok(char *str, char *delim)
 {
 	char *new;
-	static char *token_ptr = NULL;
-	
+
+	static char *token_ptr
+
+
 	if (str != NULL)
 		token_ptr = str;
 	if (token_ptr == NULL || *token_ptr == '\0')
-		return NULL;
+		return (NULL);
 	while (*token_ptr != '\0' && _check(delim, *token_ptr))
 		token_ptr++;
 	if (*token_ptr == '\0')
-		return NULL;
+		return (NUL);
 
 	new = token_ptr;
 
@@ -103,39 +105,39 @@ char *_strtok(char *str, char *delim)
 * @delim: delimiters
 * Return: first partition
 */
-char *_strtok2(char *str, char *delim)
+int char *_strtok2(char *str, char *delim)
 {
-        static char *token_ptr = NULL;
-        int i = 0, j = 0;
+	static char *token_ptr
+	int i = 0, j = 0;
 
-        if (!str)
-                str = token_ptr;
-        while (str[i] != '\0')
-        {
-                if (_check(delim, str[i]) == 0 && str[i + 1] == '\0')
+	if (!str)
+		str = token_ptr;
+	while (str[i] != '\0')
+	{
+		if (_check(delim, str[i]) == 0 && str[i + 1] == '\0')
 		{
-                        i++;
+			i++;
 		}
-                else if (_check(delim, str[i]) == 0 && _check(delim, str[i + 1]) == 0)
+		else if (_check(delim, str[i]) == 0 && _check(delim, str[i + 1]) == 0)
 		{
-                        i++;
+			i++;
 		}
-                else if (_check(delim, str[i]) == 0 && _check(delim, str[i + 1]) == 1)
-                {
-                        token_ptr = str + i + 1;
-                        *token_ptr = '\0';
-                        token_ptr++;
-                        str = str + j;
-                        return (str);
-                }
-                else if (_check(delim, str[i]) == 1)
-                {
-                        i++;
-                        j++;
-                }
+		else if (_check(delim, str[i]) == 0 && _check(delim, str[i + 1]) == 1)
+		{
+			token_ptr = str + i + 1;
+			*token_ptr = '\0';
+			token_ptr++;
+			str = str + j;
+			return (str);
+		}
+		else if (_check(delim, str[i]) == 1)
+		{
+			i++;
+			j++;
+		}
 	}
 	/* If No Delimiters Found */
-        return (NULL);
+	return (NULL);
 }
 
 /* STRING COMPARE */
