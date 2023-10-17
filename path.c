@@ -1,24 +1,24 @@
 #include "simpleshell.h"
 
 /**
- * checkbin - function appears to search for 
+ * check_path - function appears to search for 
  * /bin/ within directories listed in the PATH
  * @buffer: user input, array of pointers
  * @env_copy: copy of environment variables
  * Return: 0 (success) or NULL.
  */
-char **checkbin(char **buffer, char **env_copy)
+char **check_path(char **buffer, char **env_copy)
 {
 	char *tokens, *buf, *newpath, *path, *ptr;
 	unsigned int i = 0, j = 0, n = 0;
 	struct stat verify;
 	
-	if (buffer == NULL || buffer[0] == NULL || buffer[0][0] = '\0')
+	if (buffer == NULL || buffer[0] == NULL || buffer[0][0] == '\0')
 		return (NULL);
 	i = strlength(buffer[0]);
 	if (i == 0)
 		return (NULL);
-	path = _getpath(env_copy);
+	path = get_path(env_copy);
 	if (path == NULL)
 		return (buffer);
 
@@ -126,7 +126,7 @@ char *get_path(char **env_copy)
 		if (count == 5)
 			break;
 	}
-	k = count;
+	n = count;
 	if (count == 5)
 	{
 		while (env_copy[i][n] != '\0')

@@ -1,7 +1,5 @@
 #include "simpleshell.h"
 
-int currentstatus(int *status);
-
 /**
  * _frk - program that forks a child process and executes a command 
  * specified by 'arg'

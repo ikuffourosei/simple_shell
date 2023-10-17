@@ -5,31 +5,31 @@
  * @name: variable to be deleted
  * Return: 0 (success) -1 (otherwise)
  */ 
-int _unsetenv(char *name)
+int _unsetenv(char **env, int *env_count, char *var_name)
 {
-	extern char **environ;
 	char *env_var;
-	size_t name_len;
-	int i, j;
+	size_t var_name_len;
+	int i, j, flag = 0;
 
-	if (name == NULL || name[0] == '\0')
+	if (env == NULL || env_count == NULL || var_name[0] == '\0')
 	{
 		return (-1);
 	}
-	for (i = 0; environ[i] != NULL; i++)
+	for (i = 0; i < env_count; i++)
 	{
-		env_var = environ[i];
-		name_len = strlength(name);
-		if (_strncmp(env_var, name, name_len) == 0 && env_var[name_len] == '=')
+		env_var = env[i];
+		var_name_len = strlength(var_name);
+		if (_strncmp(env_var, var_name, var_name_len) == 0 && env_var[var_name_len] == '=')
 		{
-			for (j = i; environ[j] != NULL; j++)
+			for (j = i; j < env_count - 1; j++)
 			{
-				environ[j] = environ[j + 1];
+				env[j] = env[j + 1];
 			}
-		        return (0);
+			env_count --;
+			flag = 1;
+			i--;
 		}
 	}
 
-	// If variable not found
-	return (-1);
+	return (flag);
 }

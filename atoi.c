@@ -16,22 +16,22 @@ int _atoi(char *str)
 	len = 0;
 	digit = 0;
 
-	while (s[len] != '\0')
+	while (str[len] != '\0')
 		len++;
 
 	while (i < len && flag == 0)
 	{
-		if (s[i] == '-')
+		if (str[i] == '-')
 			++d;
 
-		if (s[i] >= '0' && s[i] <= '9')
+		if (str[i] >= '0' && str[i] <= '9')
 		{
-			digit = s[i] - '0';
+			digit = str[i] - '0';
 			if (d % 2)
 				digit = -digit;
 			n = n * 10 + digit;
 			flag = 1;
-			if (s[i + 1] < '0' || s[i + 1] > '9')
+			if (str[i + 1] < '0' || str[i + 1] > '9')
 				break;
 			flag = 0;
 		}

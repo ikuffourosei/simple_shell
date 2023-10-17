@@ -90,7 +90,7 @@ void _dir(char *buffer, char **myenv)
 		buff_len = strlength(user_pwd);
 		env_len = strlength(myenv[i]);
 		
-		if (buff_len < myenvlen)
+		if (buff_len < env_len)
 		{
 			for (n = 0; user_pwd[n] != '\0'; n++)
 				myenv[i][n] = user_pwd[n];
@@ -101,7 +101,7 @@ void _dir(char *buffer, char **myenv)
 		{
 			myenv[i] = _realloc(myenv[i], env_len, buff_len + 1);
 			for (n = 0; user_pwd[n] != '\0'; n++)
-				myenv[i][m] = user_pwd[n];
+				myenv[i][n] = user_pwd[n];
 		}
 	}
 	free(user_pwd);

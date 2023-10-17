@@ -8,7 +8,7 @@
 
 ssize_t read_helphelp(char **envcopy)
 {
-	char *str, *home, help_dir;
+	char *str, *home, *help_dir;
 	int file_des, rd, wrt;
 	char helpdoc[] = "/simple_shell/_helpfiles/help_help.txt";
 	unsigned long int buf = SIZE;
@@ -16,8 +16,10 @@ ssize_t read_helphelp(char **envcopy)
 	str = malloc((sizeof(char) * buf + 1));
 	if (str == NULL)
 		return (0);
-	help_dir = _strconcat(home, helpdoc);
 	home = _gethome(envcopy);
+	help_dir = str_concat(home, helpdoc);
+	file_des = open(help_dir, O_RDONLY);
+	rd = read(file_des, str, buf);
 	wrt = write(STDOUT_FILENO, str, rd);
 	if (wrt == -1)
 	{
@@ -25,14 +27,12 @@ ssize_t read_helphelp(char **envcopy)
 		free(str);
 		return (0);
 	}
-	rd = read(file_des, str, buf);
 	if (rd == -1)
 	{
 		free(help_dir);
 		free(str);
 		return (0);
 	}
-	file_des = open(help_dir, O_RDONLY);
 	if (file_des == -1)
 	{
 		free(help_dir);
@@ -62,8 +62,10 @@ ssize_t read_cdhelp(char **envcopy)
 	str = malloc((sizeof(char) * buf + 1));
 	if (str == NULL)
 		return (0);
-	helpdir = _strconcat(home, helpdoc);
 	home = _gethome(envcopy);
+	helpdir = str_concat(home, helpdoc);
+	file_des = open(helpdir, O_RDONLY);
+	rd = read(file_des, str, buf);
 	wrt = write(STDOUT_FILENO, str, rd);
 	if (wrt == -1)
 	{
@@ -71,14 +73,12 @@ ssize_t read_cdhelp(char **envcopy)
 		free(str);
 		return (0);
 	}
-	rd = read(file_des, str, buf);
 	if (rd == -1)
 	{
 		free(helpdir);
 		free(str);
 		return (0);
 	}
-	file_des = open(helpdir, O_RDONLY);
 	if (file_des == -1)
 	{
 		free(helpdir);
@@ -108,8 +108,10 @@ ssize_t read_exithelp(char **envcopy)
 	str = malloc((sizeof(char) * buf + 1));
 	if (str == NULL)
 		return (0);
-	helpdir = _strconcat(home, helpdoc);
 	home = _gethome(envcopy);
+	helpdir = str_concat(home, helpdoc);
+	file_des = open(helpdir, O_RDONLY);
+	rd = read(file_des, str, buf);
 	wrt = write(STDOUT_FILENO, str, rd);
 	if (wrt == -1)
 	{
@@ -117,14 +119,12 @@ ssize_t read_exithelp(char **envcopy)
 		free(str);
 		return (0);
 	}
-	rd = read(file_des, str, buf);
 	if (rd == -1)
 	{
 		free(helpdir);
 		free(str);
 		return (0);
 	}
-	file_des = open(helpdir, O_RDONLY);
 	if (file_des == -1)
 	{
 		free(helpdir);
@@ -154,23 +154,23 @@ ssize_t read_help(char **envcopy)
 	str = malloc((sizeof(char) * buf + 1));
 	if (str == NULL)
 		return (0);
-	help_dir = _strconcat(home, helpdoc);
 	home = _gethome(envcopy);
+	help_dir = str_concat(home, helpdoc);
+	file_des = open(help_dir, O_RDONLY);
 	rd = read(file_des, str, buf);
+	wrt = write(STDOUT_FILENO, str, rd);
 	if (rd == -1)
 	{
 		free(help_dir);
 		free(str);
 		return (0);
 	}
-	wrt = write(STDOUT_FILENO, str, rd);
 	if (wrt == -1)
 	{
 		free(help_dir);
 		free(str);
 		return (0);
 	}
-	file_des = open(help_dir, O_RDONLY);
 	if (file_des == -1)
 	{
 		free(help_dir);

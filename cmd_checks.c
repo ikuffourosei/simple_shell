@@ -98,7 +98,7 @@ int _iscd(char **input, int loop, char *arg[], char **env_copy)
  * @result: complete input
  * Return: 0 (success) -1 (otherwise)
  */
-int _isexit(char **input, int loop, char *line, char **env_copy, char *result)
+int _isexit(char **input, int loop, char *line, char **arg, char **env_copy, char *result)
 {
 	int count, i, n, y;
 	char str[] = "exit";

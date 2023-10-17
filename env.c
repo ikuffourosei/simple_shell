@@ -56,7 +56,7 @@ char **create_env(char *en_v[])
 	env_copy = _calloc(i + 1, sizeof(char *));
 	if (!env_copy)
 		return (NULL);
-	for (n = 0; en_v[n] != NULL, n++)
+	for (n = 0; en_v[n] != NULL; n++)
 	{
 		x = 0;
 

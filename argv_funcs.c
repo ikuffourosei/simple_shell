@@ -18,7 +18,7 @@ int cui(char **input, int loop, char *iu, char **arg, char ***env_copy,\
 	int help = 0, cd = 0, ex = 0, env = 0, unset = 0, set = 0;
 
 	help = _ishelp(input, loop, arg, *env_copy);
-	cd = _iscd(input, loop, argv, *env_copy);
+	cd = _iscd(input, loop, arg, *env_copy);
 	ex = _isexit(input, loop, iu, arg, *env_copy, result);
 	env = _isenv(input, *env_copy);
 	unset = _isunsetenv(input, *env_copy, j, arg);
@@ -48,21 +48,21 @@ int cui(char **input, int loop, char *iu, char **arg, char ***env_copy,\
  *@j: number of elements in env_copy
  *@result: complete input
  */
-void shfunc(char *line, int loop, char *argv[], char ***env_copy, char *result)
+void shfunc(char *line, int loop, char *argv[], char ***env_copy, int *j, char *result)
 {
 	char **arg = NULL;
 	int ind, res;
 
 	line = _comments(line);
-	args = parsing(line);
+	arg = parsing(line);
 	res = 1;
 	ind = 0;
 	if (arg)
 	{
 		for (ind = 0; arg[ind] != NULL; ind++)
 			;
-		res = cui(args, loop, line, argv, env_copy, j, result);
-		if (value != 0)
+		res = cui(arg, loop, line, argv, env_copy, j, result);
+		if (res != 0)
 		{
 			arg = check_path(arg, *env_copy);
 			if (arg)

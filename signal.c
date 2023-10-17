@@ -6,7 +6,8 @@
  */
 void _signal(int sig)
 {
-	(void)signal;
+	/* Indicating that it is unintentionally used*/
+	(void)sig;
 
 	_putchar('\n');
 	_print("#cisfun$ ");

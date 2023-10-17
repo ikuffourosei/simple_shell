@@ -12,7 +12,7 @@ void _readargv(char *argv[], char *_env[])
 	int i, j, sc, *loop_track;
 	static int loop;
 
-	ptr1 = NULL;
+	ptr = NULL;
 	line = NULL;
 	parse = NULL;
 	env_copy = NULL;
@@ -59,7 +59,7 @@ void _read(char *argv[], char *_env[])
 	int i, j, sc, *loop_track;
 	static int loop;
 
-	ptr1 = NULL;
+	ptr = NULL;
 	line = NULL;
 	parse = NULL;
 	env_copy = NULL;
@@ -76,13 +76,13 @@ void _read(char *argv[], char *_env[])
 				;
 		}
 		line = _getline(loop_track, env_copy, j);
-		sem = semicolon(line, loop, argv);
+		sc = semicolon(line, loop, argv);
 		if (!(sc == 1))
 		{
 			parse = _strtok2(line, ";\n");
 			while (parse)
 			{
-				ptr = _calloc(strlength(p) + 2, sizeof(char));
+				ptr = _calloc(strlength(parse) + 2, sizeof(char));
 				for (i = 0; parse[i] != '\0'; i++)
 					ptr[i] = parse[i];
 				ptr[i] = '\n';

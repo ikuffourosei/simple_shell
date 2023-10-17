@@ -37,7 +37,7 @@ char **parsing(char *line);
 /* MEMORY HANDLING */
 char *_memcpy(char *dest, char *src, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
-void free_grid(int **grid, int height);
+void free_grid(char **grid, int height);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void *_realloc_(char *str, char *ptr, unsigned int old_size, unsigned int new_size);
 
@@ -48,6 +48,7 @@ int _setenv(char *name, char *value, int overwrite);
 
 /* UNSETENV */
 int _unsetenv(char *name);
+int _isunsetenv(char *command, char **env_copy, int *j, char **arg);
 
 /*ARGS FUNCTIONS*/
 void _readargv(char *argv[], char *_env[]);
@@ -65,7 +66,7 @@ void old_dir(char *buffer, char **myenv);
 void _dir(char *buffer, char **myenv);
 
 /* PATH */
-char **checkbin(char **buffer, char **env_copy);
+char **check_path(char **buffer, char **env_copy);
 char *verify_path(char *path, char *pwd);
 char *get_path(char **env_copy);
 
@@ -90,6 +91,7 @@ char *_gethome(char **envcopy);
 char **create_env(char *en_v[]);
 void _env(char **myenv);
 void foork(char **arg, char *input, int ptc, int loop, char **v, int e, char **envcopy, char *result);
+int currentstatus(int *status);
 
 /* GETLINE */
 char  *_getline(int *loop, char **envcopy, int e);
@@ -101,6 +103,7 @@ void _errorcd(char **input);
 void _errorexit(char **input);
 void _errorhelp(char **input);
 void _errornotfound(char **input);
+void _errorenv(char **input);
 void _put_err(char **input, int loop, int signal, char *arg[]);
 void _builtinerr(char **input);
 void _builtinerr2(char **input);
@@ -114,4 +117,4 @@ ssize_t read_cdhelp(char **envcopy);
 ssize_t read_exithelp(char **envcopy);
 ssize_t read_help(char **envcopy);
 
-#endif
+#endif /*SIMPLESHELL_H*/

@@ -35,7 +35,7 @@ void _cd(char **input, int loop, char *arg[], char **myenv)
 	{
 		buf_clean(aux), getcwd(aux, BUFSIZE);
 		old_dir(aux, myenv);
-		_pirnt(buf);
+		_print(buf);
 		_putchar('\n');
 		res = chdir((const char *) buf);
 		_dir(buf, myenv), buf_fil(buf, aux);

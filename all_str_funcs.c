@@ -134,7 +134,7 @@ char *_strtok2(char *str, char *delim)
                         j++;
                 }
 	}
-	// If No Delimiters Found 
+	/* If No Delimiters Found */
         return (NULL);
 }
 
