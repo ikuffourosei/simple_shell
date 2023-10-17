@@ -39,7 +39,7 @@ To every command, there are various options within. An option can be set by usin
 .SH EXAMPLE
 
 [command] [options]
-$ rm -rf,  --forcefuly removes a directory whether empty or not.  
+$ rm -rf,  --forcefuly removes a directory whether empty or not.
 
 .SH USAGE
 To run the simple_shell, simply execute it from your command line:
@@ -49,7 +49,7 @@ $ ./hsh
 .SH EXIT
 To exit the simple_shell, simple double press Ctrl + D.
 
-$ ^D 
+$ ^D
 or
 $ exit [status]
 
