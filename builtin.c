@@ -13,7 +13,7 @@ void _cd(char **input, int loop, char *arg[], char **myenv)
 	int res = 0, i = 0;
 	static int w  = 1;
 	static char buf[BUFSIZE];
-	
+
 	currentstatus(&i);
 	if (w == 1)
 	{
