@@ -9,7 +9,7 @@
  */
 int _setenv(char *name, char *value, int overwrite)
 {
-	extern char **environ;
+	char **environ;
 	size_t name_len;
 	char *new_env_var;
 	char **new_env;
