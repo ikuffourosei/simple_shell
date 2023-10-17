@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * print_n - function that prints all naturalumbers
+ * print_n - Function that prints all naturalumbers
  * @number: number to print
  */
 void print_n(int number)
