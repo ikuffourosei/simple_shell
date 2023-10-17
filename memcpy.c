@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * *_memcpy - function that copies memory area
+ * *_memcpy - Function that copies memory area
  * @dest: destination memory area
  * @src: source memory area
  * @n: size in bytes to copy
