@@ -95,8 +95,7 @@ void foork(char **arg, char *input, int ptc, int loop, char **v, int e, char **e
 char  *_getline(int *loop, char **envcopy, int e);
 char  *_getlineav(int *loop, char **envcopy, int e, char **arg);
 
-
-/* ERROR MESSAGES */  
+/* ERROR MESSAGES */
 void _errorcd(char **input);
 void _errorexit(char **input);
 void _errorhelp(char **input);
