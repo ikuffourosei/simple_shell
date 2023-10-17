@@ -5,7 +5,7 @@
  * @c: character
  * Return; integer value
  */
-int void puterror(char c)
+int puterror(char c)
 {
 	return (write(STDERR_FILENO, &c, 1));
 }
