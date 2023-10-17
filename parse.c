@@ -3,7 +3,7 @@
 int Counter(char *line, char *str);
 
 /**
- * parsing - function that takes a string line and tokenizes it 
+ * parsing - function that takes a string line and tokenizes it
  * into an array of strings
  * @line: input accepted from the user
  * Return: an array of pointers
