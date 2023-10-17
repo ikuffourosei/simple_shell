@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _frk - program that forks a child process and executes a command 
+ * _frk - program that forks a child process and executes a command
  * specified by 'arg'
  * @arg array of pointer (args)
  * @input: input accepted from user
@@ -12,11 +12,11 @@
  * @envcopy: copy of environmental variable
  * @result: complete input
  */
-void foork(char **arg, char *input, int ptc, int loop, char **v, int e, char **envcopy, char *result)
+int void foork(char **arg, char *input, int ptc, int loop, char **v, int e, char **envcopy, char *result)
 {
 	int status, exec, exist, x;
 	pid_t child_pid;
-	
+
 	x = 0;
 	child_pid = fork();
 	if (child_pid == -1)
