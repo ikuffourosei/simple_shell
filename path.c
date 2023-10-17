@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * check_path - function appears to search for 
+ * check_path - function appears to search for
  * /bin/ within directories listed in the PATH
  * @buffer: user input, array of pointers
  * @env_copy: copy of environment variables
@@ -12,7 +12,7 @@ char **check_path(char **buffer, char **env_copy)
 	char *tokens, *buf, *newpath, *path, *ptr;
 	unsigned int i = 0, j = 0, n = 0;
 	struct stat verify;
-	
+
 	if (buffer == NULL || buffer[0] == NULL || buffer[0][0] == '\0')
 		return (NULL);
 	i = strlength(buffer[0]);
@@ -56,7 +56,7 @@ char **check_path(char **buffer, char **env_copy)
 }
 
 /**
- * verify_path - checks for cases where the PATH variable 
+ * verify_path - checks for cases where the PATH variable
  * may start with a colon : or contain consecutive colons ::
  *@path: string inside the PATH env variable
  *@pwd: string inside the PWD env variable
@@ -69,7 +69,7 @@ char *verify_path(char *path, char *pwd)
 
 	while (path[n] != '\0')
 		n++;
-	while (path[j]!= '\0')
+	while (path[j] != '\0')
 	{
 		if (path[0] == ':')
 		{
