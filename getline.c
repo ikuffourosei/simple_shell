@@ -131,7 +131,7 @@ void out1(char **envcopy, int e)
 /**
  * out2 - out with a double C^D
  *@envcopy copy of environmental variables
- *@e: number of elements in envcopy 
+ *@e: number of elements in envcopy
  *@line: input accepted from user
  */
 void out2(char **envcopy, int e, char *line)
