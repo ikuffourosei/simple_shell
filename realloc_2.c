@@ -5,7 +5,7 @@
  * @ptr: pointer for realloc
  * @old_size: old size in bytes
  * @new_size: new size in bytes
- * 
+ *
  */
 void *_realloc_(char *str, char *ptr, unsigned int old_size, unsigned int new_size)
 {
