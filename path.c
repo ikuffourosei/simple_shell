@@ -22,8 +22,8 @@ char **check_path(char **buffer, char **env_copy)
 	if (path == NULL)
 		return (buffer);
 
-	tokens = _strtok(newpath, ";");
 	newpath = verify_path(path, ".");
+	tokens = _strtok(newpath, ";");
 	if (!tokens)
 		return (NULL);
 	while (tokens != NULL)

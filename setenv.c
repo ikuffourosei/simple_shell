@@ -7,9 +7,10 @@
  * @overwrite: if 0 skip, otherwise (overwrite the variable if it already exists)
  * Return: 0 (success) -1 (otherwise).
  */
+ extern char **environ;
+
 int _setenv(char *name, char *value, int overwrite)
 {
-	char **environ;
 	size_t name_len;
 	char *new_env_var;
 	char **new_env;
@@ -19,8 +20,8 @@ int _setenv(char *name, char *value, int overwrite)
 		return (-1);
 
 	name_len = strlength(name);
-
-	for (i = 0; environ[i] != NULL; i++)
+	
+	for (i = 0; environ != NULL && environ[i] != NULL; i++)
 	{
 		if (_strncmp(environ[i], name, name_len) == 0 && environ[i][name_len] == '=')
 		{
@@ -45,9 +46,11 @@ int _setenv(char *name, char *value, int overwrite)
 	if (new_env_var == NULL)
 		return (-1);
 	nenv_vars = 0;
-	for (i = 0; environ[i] != NULL; i++)
-		nenv_vars++;
-
+	if (environ != NULL)
+	{
+		for (i = 0; environ[i] != NULL; i++)
+			nenv_vars++;
+	}
 	new_env = _realloc(environ, nenv_vars * sizeof(char *), (nenv_vars + 2) * sizeof(char *));
 	if (new_env == NULL)
 	{
