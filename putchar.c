@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _putchar - function that prints a character to the STDOUT
+ * _putchar - Function that prints a character to the STDOUT
  * @c: character to be printed
  * Return: int value
  */

@@ -1,9 +1,9 @@
 #include "simpleshell.h"
 
 /**
- * print_n - function that prints all naturalumbers 
+ * print_n - function that prints all naturalumbers
  * @number: number to print
- */ 
+ */
 void print_n(int number)
 {
 	unsigned int i, n, num1, num2, num3, count;

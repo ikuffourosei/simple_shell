@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _signal - function that handles SIGINT signal
+ * _signal - Function that handles SIGINT signal
  * @sig: the signal to catch
  */
 void _signal(int sig)

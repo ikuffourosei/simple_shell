@@ -14,7 +14,7 @@ int _issetenv(char *command)
 	{
 		num_tokens = tokenize(command, tokens, 4);
 
-        if (num_tokens >= 3)
+		if (num_tokens >= 3)
 	{
 		return (_setenv(tokens[1], tokens[2], atoi(tokens[3])));
 	}

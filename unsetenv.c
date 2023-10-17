@@ -7,6 +7,7 @@
  */ 
 int _unsetenv(char **env, int *env_count, char *var_name)
 {
+	char **environ;
 	char *env_var;
 	size_t var_name_len;
 	int i, j, flag = 0;
@@ -30,6 +31,5 @@ int _unsetenv(char **env, int *env_count, char *var_name)
 			i--;
 		}
 	}
-
 	return (flag);
 }

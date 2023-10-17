@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _realloc - function that realloc a memory block
+ * _realloc - Function that realloc a memory block
  * @ptr: pointer
  * @old_size: old size
  * @new_size: new size
