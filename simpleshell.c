@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * main - entry point
+ * main - Entry point
  * @argc: argument count
  * @argv: arguments in the input
  * @env: environment variables
