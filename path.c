@@ -9,7 +9,7 @@
  */
 char **check_path(char **buffer, char **env_copy)
 {
-	char *tokens, *buf, *newpath = NULL, *path, *ptr;
+	char *tokens, *buf, *newpath, *path, *ptr;
 	unsigned int i = 0, j = 0, n = 0;
 	struct stat verify;
 
@@ -22,7 +22,8 @@ char **check_path(char **buffer, char **env_copy)
 	if (path == NULL)
 		return (buffer);
 
-	tokens = _strtok(path, ";");
+	newpath = _verifypath(path, ".");
+	tokens = _strtok(newpath, ":");
 	if (!tokens)
 		return (NULL);
 	while (tokens != NULL)
