@@ -1,7 +1,7 @@
 #include "simpleshell.h"
 
 /**
- * _frk - program that forks a child process and executes a command
+ * foork - program that forks a child process and executes a command
  * specified by 'arg'
  * @arg array of pointer (args)
  * @input: input accepted from user
