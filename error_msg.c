@@ -53,7 +53,7 @@ void _errorcd(char **input)
  * _errorgarbage - function that writes the missing error
  * @inputerror: input accepted from user
  */
-int void _errornotfound(char **input)
+void _errornotfound(char **input)
 {
 	int a = 2;
 

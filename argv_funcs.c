@@ -21,7 +21,7 @@ int cui(char **input, int loop, char *iu, char **arg, char ***env_copy,\
 	cd = _iscd(input, loop, arg, *env_copy);
 	ex = _isexit(input, loop, iu, arg, *env_copy, result);
 	env = _isenv(input, *env_copy);
-	unset = _isunsetenv(input, *env_copy, j, arg);
+	unset = _isunsetenv(input[0], *env_copy, j, arg);
 	set = _issetenv(arg[0]);
 	if (help == 0)
 		return (help);

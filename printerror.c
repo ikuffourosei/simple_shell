@@ -5,7 +5,7 @@
  * @str: string parameter
  * Reyurn: integer value
  */
-int void printerror(char *str)
+int printerror(char *str)
 {
 	int count = 0;
 

@@ -78,7 +78,7 @@ char *_strtok(char *str, char *delim)
 {
 	char *new;
 
-	static char *token_ptr
+	static char *token_ptr;
 
 
 	if (str != NULL)
@@ -88,7 +88,7 @@ char *_strtok(char *str, char *delim)
 	while (*token_ptr != '\0' && _check(delim, *token_ptr))
 		token_ptr++;
 	if (*token_ptr == '\0')
-		return (NUL);
+		return (NULL);
 
 	new = token_ptr;
 
@@ -105,9 +105,9 @@ char *_strtok(char *str, char *delim)
 * @delim: delimiters
 * Return: first partition
 */
-int char *_strtok2(char *str, char *delim)
+char *_strtok2(char *str, char *delim)
 {
-	static char *token_ptr
+	static char *token_ptr;
 	int i = 0, j = 0;
 
 	if (!str)

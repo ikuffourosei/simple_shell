@@ -15,7 +15,7 @@ int _isunsetenv(char *command, char **env_copy, int *env_count, char **arg)
 	{
 		if (arg[1] != NULL)
 		{
-			if (_unsetenv(env, env_count, (arg[1]) == 0))
+			if (_unsetenv(env_copy, env_count, arg[1]) == 0)
 				return (0);
 			else
 				printerror("Failed to unset the environmental variable\n");

@@ -12,7 +12,7 @@
  * @envcopy: copy of environmental variable
  * @result: complete input
  */
-int void foork(char **arg, char *input, int ptc, int loop, char **v, int e, char **envcopy, char *result)
+void foork(char **arg, char *input, int ptc, int loop, char **v, int e, char **envcopy, char *result)
 {
 	int status, exec, exist, x;
 	pid_t child_pid;
