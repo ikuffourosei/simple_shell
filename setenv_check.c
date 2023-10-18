@@ -16,7 +16,7 @@ int _issetenv(char *command)
 
 		if (num_tokens >= 3)
 		{
-			return (_setenv(tokens[1], tokens[2], 1);
+			return (_setenv(tokens[1], tokens[2], 1));
 		}
 		else if (num_tokens == 2)
 		{
