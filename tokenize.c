@@ -10,7 +10,7 @@
 int tokenize(char *command, char *tokens[], int max_tokens)
 {
 	char *token;
-	char delim[] = " ,()";
+	char delim[] = " ";
 	int token_count = 0;
 
 	if (command == NULL)
