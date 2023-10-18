@@ -22,7 +22,7 @@ char **check_path(char **buffer, char **env_copy)
 	if (path == NULL)
 		return (buffer);
 
-	newpath = _verifypath(path, ".");
+	newpath = verify_path(path, ".");
 	tokens = _strtok(newpath, ":");
 	if (!tokens)
 		return (NULL);
