@@ -91,7 +91,7 @@ void _dir(char *buffer, char **myenv)
 		env_len = strlength(myenv[i]);
 
 		if (buff_len < env_len)
-		{
+	{
 			for (n = 0; user_pwd[n] != '\0'; n++)
 				myenv[i][n] = user_pwd[n];
 			for (; n < env_len; n++)

@@ -1,15 +1,16 @@
-#ifndef SIMPLESHELL_H
-#define SIMPLESHELL_H
+#ifndef _SIMPLESHELL_H
+#define _SIMPLESHELL_H
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <limits.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
+#include <signal.h>
+
 
 #define SIZE 1024
 
