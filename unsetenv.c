@@ -25,7 +25,7 @@ int _unsetenv(char **env, int *env_count, char *var_name)
 			{
 				env[j] = env[j + 1];
 			}
-			env_count--;
+			*env_count--;
 			flag = 1;
 			i--;
 		}
