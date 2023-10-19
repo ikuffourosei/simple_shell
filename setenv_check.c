@@ -31,8 +31,6 @@ int _issetenv(char *command)
     }
     else
     {
-        printerror("Command not recognized");
-	puterror('\n');
-        return (-1);
+         return (-1);
     }
 }
