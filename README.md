@@ -57,10 +57,16 @@ Your shell will be compiled this way:
 `
 (hsh) pwd
 /home/ivan
+`
+
+`
 (hsh) ls
 Desktop    Downloads  Pictures  snap       Videos
 Documents  Music      Public    Templates  W3C-Validator
-(hsh) cd Desktop
+`
+`(hsh) cd Desktop`
+
+`
 (hsh) pwd
 /home/ivan/Desktop
 `
