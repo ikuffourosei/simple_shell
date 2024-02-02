@@ -1,5 +1,5 @@
 # 0x16. C - Simple Shell
-*Just like in a terminal you have Bash, Zsh and other types of shell, this is a simple shell called `hsh` taht performs basic shell commands.*
+*Just like in a terminal you have Bash, Zsh and other types of shell, this is a simple shell called `hsh` that performs basic shell commands.*
 
 ## Compilation
 Your shell will be compiled this way:
@@ -54,19 +54,13 @@ Your shell will be compiled this way:
 `
 
 ## Testing the shell
-`
+```
 (hsh) pwd
 /home/ivan
-`
-
-`
 (hsh) ls
 Desktop    Downloads  Pictures  snap       Videos
 Documents  Music      Public    Templates  W3C-Validator
-`
-`(hsh) cd Desktop`
-
-`
+(hsh) cd Desktop`
 (hsh) pwd
 /home/ivan/Desktop
-`
+```
